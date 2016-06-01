@@ -1,0 +1,82 @@
+
+# ==== Cloclk inputs (CLK) ====
+
+NET "clk"   LOC = "V10"	| IOSTANDARD = "LVCMOS33";
+NET "clk" TNM_NET = sys_clk;
+TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+NET "rst"	LOC = "T10"	| IOSTANDARD = "LVCMOS33";
+#NET "led"	LOC = "U16"	| IOSTANDARD = "LVCMOS33";
+
+
+# ==== UART0 ====
+NET "uart_txd"	LOC = "N18"	| IOSTANDARD = "LVCMOS33";		
+NET "uart_rxd"	LOC = "N17"	| IOSTANDARD = "LVCMOS33";		
+
+# ==== UART1 ====
+Net "uart_txd1" LOC = "G11" | IOSTANDARD = "LVCMOS33";
+Net "uart_rxd1" LOC = "F10" | IOSTANDARD = "LVCMOS33";
+
+
+# ==== SPI ====
+NET "miso"	LOC = "T12"	| IOSTANDARD = "LVCMOS33";		
+NET "mosi"	LOC = "V12"	| IOSTANDARD = "LVCMOS33";		
+NET "sck"	LOC = "N10"	| IOSTANDARD = "LVCMOS33";
+Net "ss" 	LOC = "P11" 	| IOSTANDARD = "LVCMOS33";
+
+
+#Reset
+Net "gpio0_io<1>" LOC = "M10" | IOSTANDARD = "LVCMOS33"; #Bank = 2, pin name = IO_L22P, Sch name = JA7
+
+
+# ==== I2C ====
+#NET "i2c_sda"	LOC = "V9"	| IOSTANDARD = "LVCMOS33";		
+#NET "i2c_clk"	LOC = "R8"	| IOSTANDARD = "LVCMOS33";		
+
+# OJO: NUNca pude hacer que me leyera el GPIO una entrada externa en señal alta, mediante los sock de la FPGA :(   =
+
+## Leds
+#NET "gpio0_io<0>"         LOC = "U16" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L2P_CMPCLK,                     Sch name = LD0
+#NET "gpio0_io<1>"         LOC = "V16" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L2N_CMPMOSI,                    Sch name = LD1
+#NET "gpio0_io<2>"         LOC = "U15" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L5P,                            Sch name = LD2
+#NET "gpio0_io<3>"         LOC = "V15" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L5N,                            Sch name = LD3
+#NET "gpio0_io<4>"         LOC = "M11" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L15P,                           Sch name = LD4
+#NET "gpio0_io<5>"         LOC = "N11" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L15N,                           Sch name = LD5
+#NET "gpio0_io<6>"         LOC = "R11" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L16P,                           Sch name = LD6
+#NET "gpio0_io<7>"         LOC = "T11" | IOSTANDARD = "LVCMOS33";   #Bank = 2, Pin name = IO_L16N_VREF,                      Sch name = LD7
+
+Net "col_1" LOC = "H3" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L19P, Sch name = JA1
+Net "col_2" LOC = "L7" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L19N, Sch name = JA2  
+Net "col_3" LOC = "K6" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L20P, Sch name = JA3
+Net "fil_1" LOC = "G1" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L20N, Sch name = JA4
+Net "fil_2" LOC = "J7" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L22P, Sch name = JA7
+Net "fil_3" LOC = "J6" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L22N, Sch name = JA8
+Net "fil_4" LOC = "F2" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L23P, Sch name = JA9
+
+	
+Net "catodo0<0>" LOC = "N16" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50N_M1UDQSN, Sch name = AN0
+Net "catodo0<1>" LOC = "N15" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50P_M1UDQS, Sch name = AN1
+Net "catodo0<2>" LOC = "P18" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49N_M1DQ11, Sch name = AN2
+Net "catodo0<3>" LOC = "P17" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49P_M1DQ10, Sch name = AN3
+	
+
+Net "segments0<6>" LOC = "T17" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51P_M1DQ12, Sch name = CA
+Net "segments0<5>" LOC = "T18" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51N_M1DQ13, Sch name = CB
+Net "segments0<4>" LOC = "U17" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52P_M1DQ14, Sch name = CC
+Net "segments0<3>" LOC = "U18" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52N_M1DQ15, Sch name = CD
+Net "segments0<2>" LOC = "M14" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53P, Sch name = CE
+Net "segments0<1>" LOC = "N14" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53N_VREF, Sch name = CF
+Net "segments0<0>" LOC = "L14" | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L61P, Sch name = CG
+
+
+## Leds
+Net "value0<3>" LOC = "U16" | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2P_CMPCLK, Sch name = LD0
+Net "value0<2>" LOC = "V16" |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2N_CMPMOSI, Sch name = LD1
+Net "value0<1>" LOC = "U15" |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5P, Sch name = LD2
+Net "value0<0>" LOC = "V15" |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5N, Sch name = LD3
+
+
+
+
+
+

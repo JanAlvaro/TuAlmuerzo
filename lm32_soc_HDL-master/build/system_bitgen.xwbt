@@ -1,0 +1,7 @@
+INFILE=/home/sony/Downloads/digi/Finlm32_soc_HDL-masterFinal/build/system-routed.ncd
+OUTFILE=/home/sony/Downloads/digi/Finlm32_soc_HDL-masterFinal/build/system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/sony/Downloads/digi/Finlm32_soc_HDL-masterFinal/build
+LICENSE=WebPack
+USER_INFO=211097533_0_0_732

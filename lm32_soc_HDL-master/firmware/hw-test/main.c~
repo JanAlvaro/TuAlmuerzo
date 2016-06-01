@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+
+#include "soc-hw.h"
+
+char borrar(char addr){
+	char val;						
+	addr = (((addr<<1)&0x7E) | 0x80);
+	uart_putchar(addr);
+	spi_set_mosi(addr);
+	spi_set_mosi(0x00);
+	val = spi_get_miso();
+	return val;	
+}
+
+int main()
+{
+	char add;
+while(1){
+
+add = 0x37;
+//add = (((add<<1)&0x7E) | 0x80);
+//uart_putchar(add);
+borrar(add);
+	
+
+msleep(100);
+}
+	
+}
+
