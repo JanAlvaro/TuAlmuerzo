@@ -1,0 +1,7 @@
+INFILE=/home/joaquin/Escritorio/FINAL FINAL NO HUBO MAS/lm32-finish_him/build/system-routed.ncd
+OUTFILE=/home/joaquin/Escritorio/FINAL FINAL NO HUBO MAS/lm32-finish_him/build/system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/joaquin/Escritorio/FINAL FINAL NO HUBO MAS/lm32-finish_him/build
+LICENSE=WebPack
+USER_INFO=211016418_0_0_953
